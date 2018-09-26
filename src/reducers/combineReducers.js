@@ -1,6 +1,9 @@
-import combineReducers from 'react-redux';
-import todoItemsReducer from './todoItemsReducer.js';
+import {combineReducers} from 'redux';
+import todoItemList from './todoItemsReducer.js';
+import newTodo from './newTodoReducer.js';
+
 
 export default combineReducers({
-    todoItemList: todoItemsReducer,
+    todoItemList,
+    newTodo,
 });
