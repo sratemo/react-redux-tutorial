@@ -1,5 +1,11 @@
-export const TOGGLE_COMPLETE = "TOGGLE_COMPLETE";
+export const CREATE_CONTACT = "CREATE_CONTACT";
 
-export const CREATE_ACTION = "CREATE_ACTION";
+export const UPDATE_CONTACT = "UPDATE_CONTACT";
 
-export const NEW_TODO = "NEW_TODO";
+export const DELETE_CONTACT = "DELETE_CONTACT";
+
+export const NEW_ADDRESS = "NEW_ADDRESS";
+
+export const NEW_NAME = "NEW_NAME";
+
+export const NEW_PHONE = "NEW_PHONE";

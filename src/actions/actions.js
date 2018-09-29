@@ -1,16 +1,31 @@
 import * as types from '../constants/actionTypes.js';
 
-export const toggleAction = (actionId) => ({
-    type: types.TOGGLE_COMPLETE,
-    payload: actionId, 
+export const createContact = (data) => ({
+    type: types.CREATE_CONTACT,
+    payload: data,
 });
 
-export const createTodo = (action) => ({
-    type: types.CREATE_ACTION,
-    payload: action,
+export const updateContact = (contactId, newData) => ({
+    type: types.UPDATE_CONTACT,
+    payload: {id: contactId, ...newData}, 
 });
 
-export const updateNewTodo = (newTodo) => ({
-    type: types.NEW_TODO,
-    payload: newTodo,
+export const deleteContact = (contactId) => ({
+    type: types.DELETE_CONTACT,
+    payload: {id: contactId}
+});
+
+export const updateNewName = (newName) => ({
+    type: types.NEW_NAME,
+    payload: newName,
+});
+
+export const updateNewAddress = (newAddress) => ({
+    type: types.NEW_ADDRESS,
+    payload: newAddress,
+});
+
+export const updateNewPhone = (newPhone) => ({
+    type: types.NEW_PHONE,
+    payload: newPhone,
 });
