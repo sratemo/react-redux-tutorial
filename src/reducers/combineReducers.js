@@ -1,9 +1,11 @@
 import {combineReducers} from 'redux';
-import todoItemList from './todoItemsReducer.js';
-import newTodo from './newTodoReducer.js';
+import contactList from './contactListReducer.js';
+import {newName, newPhone, newAddress} from './inputReducers.js';
 
 
 export default combineReducers({
-    todoItemList,
-    newTodo,
+    contactList,
+    newName,
+    newPhone,
+    newAddress
 });

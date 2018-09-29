@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 
-class TodoItem extends Component {
+class ContactCard extends Component {
+
     render() {
         //Render Component
     }
 }
 
-export default TodoItem;
+export default ContactCard;

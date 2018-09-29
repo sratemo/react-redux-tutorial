@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import connect from 'react-redux';
+import {connect} from 'react-redux';
 import * as actions from '../actions/actions.js';
 
 function mapStateToProps(state) {
@@ -14,11 +14,11 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
-class TodoCreator extends Component {
-
+class ContactCreator extends Component {
+    
     render() {
         //Render Component
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(TodoCreator);
+export default connect(mapStateToProps, mapDispatchToProps)(ContactCreator);
