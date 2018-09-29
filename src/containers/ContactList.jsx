@@ -30,8 +30,10 @@ function mapDispatchToProps(dispatch) {
 class ContactList extends Component {
 
     render() {
-        let todoItems = this.props.contactList.map((contact) => {
-            return (<ContactCard id={contact.id} name={contact.name} address={contact.address} phone={contact.phone} deleteCard={this.props.deleteCard(contact.id)} updateCard={this.props.updateCard(contact.id, this.props.name, this.props.address, this.props.phone)}/>)
+        const { contactList, name, address, phone, updateCard, deleteCard } = this.props;
+        let todoItems = contactList.map((contact) => {
+            return (<ContactCard id={contact.id} name={contact.name} address={contact.address} phone={contact.phone} 
+                deleteCard={deleteCard(contact.id)} updateCard={updateCard(contact.id, name, address, phone)}/>)
         });
 
         return (

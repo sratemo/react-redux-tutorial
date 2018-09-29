@@ -13,9 +13,7 @@ function mapStateToProps(store) {
 function mapDispatchToProps(dispatch) {
     return {
         createContact: function(data) {
-            return function(event) {
-                dispatch(actions.createContact(data));
-            }
+            dispatch(actions.createContact(data));
         },
         updateNewName: function(event) {
             dispatch(actions.updateNewName(event.target.value))
@@ -30,13 +28,14 @@ function mapDispatchToProps(dispatch) {
 }
 
 class ContactCreator extends Component {
-
+    
     render() {
+        const { createContact, updateNewName, updateNewAddress, updateNewPhone, newName, newAddress, newPhone } = this.props;
         return (<div className="contactCreator">
-            <input placeholder={'Contact Name'} className="contactNameInput" onChange={this.props.updateNewName} value={this.props.newName}></input>
-            <input placeholder={'Contact Address'} className="contactAddressInput" onChange={this.props.updateNewAddress} value={this.props.newAddress}></input>
-            <input placeholder={'Contact Phone'} className="contactPhoneInput" onChange={this.props.updateNewPhone} value={this.props.newPhone}></input>
-            <button onClick={this.props.createContact({name: this.props.newName, address: this.props.newAddress, phone: this.props.newPhone})}>Create Contact</button>
+            <input placeholder={'Contact Name'} className="contactNameInput" onChange={updateNewName} value={newName}></input>
+            <input placeholder={'Contact Address'} className="contactAddressInput" onChange={updateNewAddress} value={newAddress}></input>
+            <input placeholder={'Contact Phone'} className="contactPhoneInput" onChange={updateNewPhone} value={newPhone}></input>
+            <button onClick={() => createContact({name: newName, address: newAddress, phone: newPhone})}>Create Contact</button>
         </div>)
     }
 }
