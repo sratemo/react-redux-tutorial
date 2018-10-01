@@ -1,7 +1,7 @@
 import * as types from '../constants/actionTypes.js';
 
 export function newName(previousState = "", action) {
-    switch(action.type) {
+    switch (action.type) {
         case types.NEW_NAME:
             return action.payload;
         case types.CREATE_CONTACT:
@@ -14,7 +14,7 @@ export function newName(previousState = "", action) {
 }
 
 export function newAddress(previousState = "", action) {
-    switch(action.type) {
+    switch (action.type) {
         case types.NEW_ADDRESS:
             return action.payload;
         case types.CREATE_CONTACT:
@@ -26,8 +26,8 @@ export function newAddress(previousState = "", action) {
     }
 }
 
-export function newPhone(previousState="", action) {
-    switch(action.type) {
+export function newPhone(previousState = "", action) {
+    switch (action.type) {
         case types.NEW_PHONE:
             return action.payload;
         case types.CREATE_CONTACT:

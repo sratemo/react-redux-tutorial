@@ -9,8 +9,8 @@ class App extends Component {
       <div>
         <div className="App">
           <h1>Contact Book</h1>
-            <ContactCreator />
-            <ContactList />
+          <ContactCreator />
+          <ContactList />
         </div>
       </div>
     );
